@@ -12,8 +12,9 @@ const Generate = () => {
     // const [link, setLink] = useState("")
     // const [linktext, setLinktext] = useState("")
     const searchParams = useSearchParams();
+    const param = searchParams.get('handle');
     const [links, setLinks] = useState([{ link: "", linktext: "" }]);
-    const [handle, setHandle] = useState(searchParams.get('handle'))
+    const [handle, setHandle] = useState(param);
     const [pic, setPic] = useState("")
     const [desc, setDesc] = useState("")
     const ref = useRef();
