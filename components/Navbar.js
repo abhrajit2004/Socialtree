@@ -21,7 +21,7 @@ const Navbar = () => {
 
     const pathname = usePathname();
 
-    const showNavbar = ["/", "/generate", "/links"].includes(pathname);
+    const showNavbar = ["/", "/generate", "/users"].includes(pathname);
     
 
     return (
@@ -35,7 +35,7 @@ const Navbar = () => {
 
                         <ul className={`flex gap-10 ${poppinsmedium.className}`}>
                             <Link href={"/"}><li>Home</li></Link>
-                            <Link href={"/links"}><li>All Users</li></Link>
+                            <Link href={"/users"}><li>All Users</li></Link>
                             {/* <Link href={"/"}><li>Marketplace</li></Link>
                             <Link href={"/"}><li>Discover</li></Link>
                             <Link href={"/"}><li>Pricing</li></Link>
