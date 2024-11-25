@@ -5,6 +5,7 @@ import { useState, useRef } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
 const Generate = () => {
 
@@ -75,7 +76,7 @@ const Generate = () => {
     }
 
     return (
-        <>
+        <Suspense fallback={<div>Loading...</div>}>
             <ToastContainer />
             <div>
                 <div className='bg-[#e9c0e9] min-h-screen grid grid-cols-2'>
@@ -124,7 +125,7 @@ const Generate = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </Suspense>
     )
 }
 
