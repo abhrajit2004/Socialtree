@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useSearchParams } from 'next/navigation';
 
-const page = () => {
+const Generate = () => {
 
     // const [link, setLink] = useState("")
     // const [linktext, setLinktext] = useState("")
@@ -128,4 +128,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Generate

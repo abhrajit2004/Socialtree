@@ -2,7 +2,7 @@ import Link from "next/link"
 import clientPromise from "@/lib/mongodb"
 import { notFound } from "next/navigation";
 
-export default async function Page({ params }) {
+export default async function Handle({ params }) {
 
     const handle = (await params).handle
     const client = await clientPromise;

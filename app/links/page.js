@@ -1,7 +1,7 @@
 import clientPromise from "@/lib/mongodb"
 import Link from "next/link";
 
-export default async function Page() {
+export default async function Links() {
 
 
     const client = await clientPromise;
