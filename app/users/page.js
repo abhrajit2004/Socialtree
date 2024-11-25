@@ -5,12 +5,10 @@ export default async function Links() {
 
 
     const client = await clientPromise;
-    const db = client.db("socialtree");
+    const db = client.db("socialtree", { next: { revalidate: 60 } });
     const collection = db.collection("links");
 
-    let docs = await collection.find({}).toArray();
-
-    console.log(docs)
+    const docs = await collection.find({}).toArray();
 
 
     return (
@@ -31,3 +29,5 @@ export default async function Links() {
         </div>
     )
 }
+
+export const dynamic = 'force-dynamic'
